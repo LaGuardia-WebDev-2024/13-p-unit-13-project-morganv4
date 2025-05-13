@@ -1,13 +1,13 @@
-#movie-result {
+#Workout-result {
   background: rgb(244, 98, 181);
   border: 5px solid black;
-  font-size: 24px;
+  font-size: 94px;
   height: 160px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-#book-result {
+#Dog-result {
   background: rgb(196, 159, 255);
   border: 5px solid black;
   font-size: 24px;
@@ -17,6 +17,13 @@
 }
 
 hr {
-  height: 5px;
+  height: 9px;
   background-color: black;
 }
+h3{ 
+font-style: italic;
+  font-size: 90px;
+  font-family: Courier New;
+  font-weight: 500;
+  }
+

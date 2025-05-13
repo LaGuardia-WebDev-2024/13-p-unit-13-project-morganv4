@@ -1,12 +1,12 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[yes ] Two Interactive Drop-down Inputs 
+[ yes ] Two Different jQuery Animation Methods 
+[  yes] Add Five CSS Declarations
+[ Yes ] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ yes ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
@@ -16,73 +16,183 @@ Select ONE Additional Feature to Add
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Unit 13 Project</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+ <img src="https://berkeleybeacon.com/wp-content/uploads/2021/10/Screen-Shot-2021-10-20-at-8.59.14-PM.png"
+      width="300">
+  </body>
+</html>
+
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Unit 13 Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1>Quiz About Me
+    </h1>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- Workout Question -->
+    <form id="Workout-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        💪What is my favorite workout?
+        <select id="Workout-answer">
+          <option value="Workout1">bicep curls</option>
+          <option value="Workout2">leg press</option>
+          <option value="Workout3">weighted squats</option>
+          <option value="Workout4">shoalder press</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Work out Answer</button>
+       <img src="https://images.healthshots.com/healthshots/en/uploads/2024/09/10173919/Bicep-curl-3.jpg"
+            width="500">
     </form>
-    <div id="movie-result"></div>
+    <div id="Workout-result"></div>
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+    <!-- Dog Question -->
+    <form id="Dog-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        🐶 What breed is my Dog?
+        <select id="Dog-answer">
+          <option value="Dog1">Poodle</option>
+          <option value="Dog2">Doberman</option>
+          <option value="Dog3">Shitzhu</option>
+          <option value="Dog4">Chihuahua</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">CheckDog Answer</button>
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR_fgnZUvDsXnEGtsfZIaOTpFmV9Vo6nlTNLwc6oIxaOCQkr4RUbjICTwD25epoG-ZsoJX4L8Cgt1-xRTQDD86Igw"
+      width="300">
     </form>
-    <div id="book-result"></div>
+    <div id="Dog-result"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //Workout Question jQuery Code
+      $("#Workout-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#Workout-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "Workout1") {
+          $("#Workout-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
-        }
+          $("#Workout-result").text("Try Again!");
+      }
       });
 
-      //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      //Dog Question jQuery Code
+      $("#Dog-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#Dog-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "Dog1") {
+          $("#Dog-result").text("YESSSS!");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#Dog-result").text("Try Again!");
         }
       });
     </script>
   </body>
 
   <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
+</html>
+
+<div id="flip">
+  Click to slide down panel</div>
+<div id="panel">
+  <img
+       src="https://i.etsystatic.com/10387888/r/il/ebe79e/4778484805/il_fullxfull.4778484805_of0g.jpg"
+       width="300"
+       />
+</div>
+
+
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("p").fadeOut();
+  });
+  $(".btn2").click(function(){
+    $("p").fadeIn();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>1. Bicep Curls
+2. Poodle.</p>
+
+<button class="btn1">Fade out</button>
+<button class="btn2">Fade in</button>
+
+</body>
+</html> 
+
+
+
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  
+  $("p").hide()
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("p").fadeOut();
+  });
+  $(".btn2").click(function(){
+    $("p").fadeIn();
+  });
+});
+</script>
+</head>
+  Answer Key
+<body>
+
+
+</body>
 </html>
